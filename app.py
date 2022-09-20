@@ -10,7 +10,6 @@ from resources.item import Item, ItemList
 from resources.store import Store, StoreList
 
 app = Flask(__name__)
-
 app.config['DEBUG'] = True
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', 'sqlite:///data.db')
@@ -36,4 +35,4 @@ if __name__ == '__main__':
         def create_tables():
             db.create_all()
 
-    app.run(port=5000)
+    app.run(port=3001)
